@@ -11,34 +11,25 @@ import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage
 import { ContactsPage } from "./containers/contactsPage/ContactsPage";
 
 function App() {
-  /*
-  Define state variables for 
-  contacts and appointments 
-  */
-
   const [contacts, setContacts] = useState([]);
   const [appointments, setAppointments] = useState([]);
-
-  /*
-  Implement functions to add data to
-  contacts and appointments
-  */
 
   const addContact = (name, number, email) => {
     const newContact = { name: name, number: number, email: email };
 
     setContacts((prev) => [newContact, ...prev]);
-
-    console.log(newContact);
   };
 
-  useEffect(() => {
-    addContact("j", 123, "123@123.com");
-  }, []);
+  const addAppointment = (name, contact, date, time) => {
+    const newAppointment = {
+      name: name,
+      contact: contact,
+      date: date,
+      time: time,
+    };
 
-  useEffect(() => {
-    console.log(contacts);
-  }, [contacts]);
+    setAppointments((prev) => [newAppointment, ...prev]);
+  };
 
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -46,11 +37,16 @@ function App() {
         <Route index element={<Navigate to={ROUTES.CONTACTS} replace />} />
         <Route
           path={ROUTES.CONTACTS}
-          element={<ContactsPage /> /* Add props to ContactsPage */}
+          element={<ContactsPage addContact={addContact} contacts={contacts} />}
         />
         <Route
           path={ROUTES.APPOINTMENTS}
-          element={<AppointmentsPage /> /* Add props to AppointmentsPage */}
+          element={
+            <AppointmentsPage
+              addAppointment={addAppointment}
+              appointments={appointments}
+            />
+          }
         />
       </Route>
     )
