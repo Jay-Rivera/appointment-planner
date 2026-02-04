@@ -20,12 +20,13 @@ function App() {
     setContacts((prev) => [newContact, ...prev]);
   };
 
-  const addAppointment = (name, contact, date, time) => {
+  const addAppointment = (name, contact, date, time, title) => {
     const newAppointment = {
       name: name,
       contact: contact,
       date: date,
       time: time,
+      title: title,
     };
 
     setAppointments((prev) => [newAppointment, ...prev]);
@@ -49,6 +50,7 @@ function App() {
             <AppointmentsPage
               addAppointment={addAppointment}
               appointments={appointments}
+              contacts={contacts}
             />
           }
         />
