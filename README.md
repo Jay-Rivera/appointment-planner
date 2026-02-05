@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# 📅 Contacts & Appointments Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React application that allows users to manage contacts and schedule appointments using reusable components and controlled forms. This project was built to strengthen core React fundamentals such as state management, props, and component reusability.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- Add and view contacts with name, phone number, and email
+- Schedule appointments linked to existing contacts
+- Reusable UI components (`TileList`, `ContactPicker`)
+- Controlled form inputs with lifted state
+- Client-side routing using React Router
+- Clean, modular component structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧠 What I Learned
 
-### `npm test`
+This project helped me strengthen several key React concepts:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Prop contracts** and how mismatches cause runtime errors
+- Building truly **reusable components** with generic APIs
+- Lifting state up and managing controlled form inputs
+- Debugging common React errors like:
+  - `Cannot read properties of undefined (reading 'map')`
+- Passing data safely through multiple component layers
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Built With
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React
+- React Router
+- JavaScript (ES6+)
+- HTML5
+- CSS
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📂 Project Structure (simplified)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+src/
+├── components/
+│ ├── contactPicker/
+│ ├── tile/
+│ ├── tileList/
+│ └── forms/
+├── containers/
+│ ├── contactsPage/
+│ └── appointmentsPage/
+├── App.js
+└── index.js
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🧪 How to Run Locally
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   Install dependencies:
+   ```
 
-## Learn More
+npm install
+Start the development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm start
+Open http://localhost:3000 in your browser.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🔮 Future Improvements
+Persist data using localStorage or a backend
 
-### Code Splitting
+Add form validation and user feedback
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Improve UI styling and accessibility
 
-### Analyzing the Bundle Size
+Add edit/delete functionality for contacts and appointments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+👤 Author
+Jose Rivera
+Aspiring Frontend / Fullstack Developer
+Self-taught, project-driven learner
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📌 Notes
+This project was completed as part of a React learning curriculum and extended with additional debugging, refactoring, and architectural improvements to better reflect real-world React development practices.
