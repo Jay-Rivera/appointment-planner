@@ -26,7 +26,7 @@ export const ContactForm = ({
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
         pattern="^[1-9][0-9]{2}-[1-9][0-9]{2}-[0-9]{4}$"
-        placeholder="Please inlcude dashes: 123-456-7890"
+        placeholder="Please include dashes: 123-456-7890"
         required
       />
 
